@@ -1,0 +1,15 @@
+span{
+    display: inline;
+    width: 100px;
+    height: 50px;
+    border: 1px solid;
+    padding: 2px 5px;
+
+}
+
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
