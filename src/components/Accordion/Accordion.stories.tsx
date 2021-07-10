@@ -8,12 +8,28 @@ export default {
     componenta: Accordion,
 }
 
-export const Collapsed = () => <Accordion collapsed={true} onChange={action("clicked")} valueTitle={"Accordion 1"}/>
-export const UnCollapsed = () => <Accordion collapsed={false} onChange={action("clicked")} valueTitle={"Accordion 2"}/>
+
+export const Collapsed = () => <Accordion onClick={alert} collapsed={true} onChange={action("clicked")}
+                                          valueTitle={"Accordion 1"} items={[]}/>
+export const UnCollapsed = () => <Accordion onClick={alert} collapsed={true} onChange={action("clicked")}
+                                            valueTitle={"Accordion 2"}
+                                            items={[{title: "asd", value: 1}, {title: "asd", value: 2}, {
+                                                title: "asd",
+                                                value: 3
+                                            }, {title: "asd", value: 4}]}/>
 
 
-export const OnOffSwitcher = () => {
+export const ControlledAccordion = () => {
     const [col, setCol] = useState<boolean>(true)
 
-    return <Accordion collapsed={col} onChange={()=>setCol(!col)} valueTitle={"Accordion 2"}/>
+    return <Accordion
+        onClick={(id) => {
+            alert(`users with id ${id} should be happy`)
+        }}
+        collapsed={col} onChange={() => setCol(!col)} valueTitle={"Accordion 2"}
+        items={[
+            {title: "asd", value: 1},
+            {title: "asd", value: 2},
+            {title: "asd", value: 3},
+            {title: "asd", value: 4}]}/>
 }
