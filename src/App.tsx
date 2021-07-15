@@ -22,7 +22,7 @@ export function App() {
             <Rating  value={ratingValue} onClick={setRatingValue}/>
 
 
-            <Accordion collapsed={accordionCollapsed} valueTitle={"Controle"} onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>
+            <Accordion onClick={setAccordionCollapsed}  items={[{title: "asdasd",value:1},{title: "xxzxc",value:2},{title: "aqweqwesdasd",value:3},]} collapsed={accordionCollapsed} valueTitle={"Controle"} onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>
             {/*<UncontrolledAccordion valueTitle={"UNCONTROLE"}/>*/}
             {/*<UncontrolledAccordion valueTitle={"UNCONTROLE"} />*/}
             {/*<UncontrolledRating/>*/}
